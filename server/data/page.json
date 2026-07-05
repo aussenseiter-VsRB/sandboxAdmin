@@ -1,43 +1,88 @@
 {
-  "blocks": [
+  "pages": [
     {
-      "id": "100",
-      "type": "text",
-      "props": {
-        "content": "This is a test landing page"
-      }
+      "id": "landing",
+      "name": "Landing Page",
+      "blocks": [
+        {
+          "id": "1",
+          "type": "hero",
+          "props": {
+            "heading": "Welcome!",
+            "subheading": "Build your landing page",
+            "bgColor": "#57e389"
+          }
+        },
+        {
+          "id": "102",
+          "type": "cta",
+          "props": {
+            "text": "Click Me",
+            "link": "https://example.com"
+          }
+        },
+        {
+          "id": "2",
+          "type": "text",
+          "props": {
+            "content": "This is a sample text block. Edit me!"
+          }
+        },
+        {
+          "id": "3",
+          "type": "image",
+          "props": {
+            "src": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+            "alt": "Sample image"
+          }
+        },
+        {
+          "id": "4",
+          "type": "cta",
+          "props": {
+            "text": "Get Started",
+            "link": "https://example.com"
+          }
+        }
+      ]
     },
     {
-      "id": "1",
-      "type": "hero",
-      "props": {
-        "heading": "Welcome!",
-        "subheading": "Build your landing page",
-        "bgColor": "#1a1a2e"
-      }
+      "id": "about",
+      "name": "About Us",
+      "blocks": [
+        {
+          "id": "103",
+          "type": "text",
+          "props": {
+            "content": "Enter your text here..."
+          }
+        }
+      ]
     },
     {
-      "id": "2",
-      "type": "text",
-      "props": {
-        "content": "This is a sample text block. Edit me!"
-      }
+      "id": "test",
+      "name": "Test Page",
+      "blocks": [
+        {
+          "id": "n1",
+          "type": "hero",
+          "props": {
+            "heading": "Test",
+            "subheading": "Hello",
+            "bgColor": "red"
+          }
+        }
+      ]
     },
     {
-      "id": "3",
-      "type": "image",
-      "props": {
-        "src": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
-        "alt": "Sample image"
-      }
+      "id": "page-1783264611767",
+      "name": "Page 3",
+      "blocks": []
     },
     {
-      "id": "4",
-      "type": "cta",
-      "props": {
-        "text": "Get Started",
-        "link": "https://example.com"
-      }
+      "id": "page-1783264965492",
+      "name": "Page 5",
+      "blocks": []
     }
   ]
 }

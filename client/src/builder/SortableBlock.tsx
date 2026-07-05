@@ -6,12 +6,13 @@ import type { Block } from '../blocks/types';
 interface SortableBlockProps {
   block: Block;
   expanded: boolean;
+  isPaletteDragging: boolean;
   onToggle: () => void;
   onDelete: () => void;
   onPropsChange: (props: Record<string, any>) => void;
 }
 
-export function SortableBlock({ block, expanded, onToggle, onDelete, onPropsChange }: SortableBlockProps) {
+export function SortableBlock({ block, expanded, isPaletteDragging, onToggle, onDelete, onPropsChange }: SortableBlockProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: block.id });
   const def = blockRegistry[block.type];
   const EditForm = def.edit;
@@ -19,10 +20,12 @@ export function SortableBlock({ block, expanded, onToggle, onDelete, onPropsChan
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-    opacity: isDragging ? 0.5 : 1,
+    opacity: isDragging ? 0.3 : 1,
     border: '1px solid #ddd',
     borderRadius: '8px',
     background: '#fff',
+    boxShadow: isDragging ? '0 4px 12px rgba(0,0,0,0.15)' : 'none',
+    pointerEvents: isPaletteDragging ? 'none' as const : 'auto' as const,
   };
 
   return (
@@ -39,7 +42,7 @@ export function SortableBlock({ block, expanded, onToggle, onDelete, onPropsChan
           borderTopRightRadius: '8px',
         }}
       >
-        <button {...attributes} {...listeners} style={{ cursor: 'grab', background: 'none', border: 'none', fontSize: '1.2rem', padding: '0 0.25rem' }}>
+        <button {...attributes} {...listeners} style={{ cursor: isPaletteDragging ? 'default' : 'grab', background: 'none', border: 'none', fontSize: '1.2rem', padding: '0 0.25rem' }}>
           ⠿
         </button>
         <span style={{ fontWeight: 600, fontSize: '0.85rem', color: '#555', flex: 1 }}>
