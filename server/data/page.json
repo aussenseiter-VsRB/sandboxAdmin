@@ -1,0 +1,43 @@
+{
+  "blocks": [
+    {
+      "id": "100",
+      "type": "text",
+      "props": {
+        "content": "This is a test landing page"
+      }
+    },
+    {
+      "id": "1",
+      "type": "hero",
+      "props": {
+        "heading": "Welcome!",
+        "subheading": "Build your landing page",
+        "bgColor": "#1a1a2e"
+      }
+    },
+    {
+      "id": "2",
+      "type": "text",
+      "props": {
+        "content": "This is a sample text block. Edit me!"
+      }
+    },
+    {
+      "id": "3",
+      "type": "image",
+      "props": {
+        "src": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
+        "alt": "Sample image"
+      }
+    },
+    {
+      "id": "4",
+      "type": "cta",
+      "props": {
+        "text": "Get Started",
+        "link": "https://example.com"
+      }
+    }
+  ]
+}
